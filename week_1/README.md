@@ -106,8 +106,8 @@ lib/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/theahmedhany/flutter_mentors_mentorship/tree/main/week_1
-   cd week_1
+   git clone https://github.com/theahmedhany/flutter_mentors_mentorship.git
+   cd flutter_mentors_mentorship/week_1
    ```
 
 2. **Install dependencies**
