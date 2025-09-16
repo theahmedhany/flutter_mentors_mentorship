@@ -106,7 +106,7 @@ lib/
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/theahmedhany/flutter_mentors_mentorship/tree/main/week_1
    cd week_1
    ```
 
@@ -133,9 +133,9 @@ lib/
 <div align="left">
   <table>
     <tr>
-      <td><img src="https://github.com/user-attachments/assets/7e562dbc-fd94-4fde-98e3-43c9b7ef140e" alt="Add Order Tab Empty" width="200"/></td>
-      <td><img src="https://github.com/user-attachments/assets/82e084ce-bac3-4319-bede-9c0fb2d7454d" alt="Add Order Tab Error" width="200"/></td>
-      <td><img src="https://github.com/user-attachments/assets/6e984edc-ca9a-46a8-9b0e-ad8da9d61d71" alt="Add Order Tab Filled" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/7e562dbc-fd94-4fde-98e3-43c9b7ef140e" alt="Add Order Tab Empty" width="300"/></td>
+      <td><img src="https://github.com/user-attachments/assets/82e084ce-bac3-4319-bede-9c0fb2d7454d" alt="Add Order Tab Error" width="300"/></td>
+      <td><img src="https://github.com/user-attachments/assets/6e984edc-ca9a-46a8-9b0e-ad8da9d61d71" alt="Add Order Tab Filled" width="300"/></td>
     </tr>
   </table>
 </div>
@@ -150,9 +150,9 @@ lib/
 <div align="left">
   <table>
     <tr>
-      <td><img src="https://github.com/user-attachments/assets/caa97f4e-67a4-4920-82e5-ac286bf3314b" alt="Pending Orders Tab Empty" width="200"/></td>
-      <td><img src="https://github.com/user-attachments/assets/88b82f39-f46c-4daa-9df1-29d3ceccd158" alt="Pending Orders Tab In Progress" width="200"/></td>
-      <td><img src="https://github.com/user-attachments/assets/b07cba01-e721-4d1f-a07a-b0c21559e26a" alt="Pending Orders Tab Completed" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/caa97f4e-67a4-4920-82e5-ac286bf3314b" alt="Pending Orders Tab Empty" width="300"/></td>
+      <td><img src="https://github.com/user-attachments/assets/88b82f39-f46c-4daa-9df1-29d3ceccd158" alt="Pending Orders Tab In Progress" width="300"/></td>
+      <td><img src="https://github.com/user-attachments/assets/b07cba01-e721-4d1f-a07a-b0c21559e26a" alt="Pending Orders Tab Completed" width="300"/></td>
     </tr>
   </table>
 </div>
@@ -167,9 +167,9 @@ lib/
 <div align="left">
   <table>
     <tr>
-      <td><img src="https://github.com/user-attachments/assets/8e0f4d36-4964-446c-a5d9-962945e83add" alt="Product Added Successfully" width="200"/></td>
-      <td><img src="https://github.com/user-attachments/assets/f8c7e3c1-1fe8-4b54-87d7-30476cf44dc4" alt="Reports Tab Daily Summary" width="200"/></td>
-      <td><img src="https://github.com/user-attachments/assets/e9979718-b376-4574-96c0-dd0360df5e87" alt="Reports Tab Top Selling" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/8e0f4d36-4964-446c-a5d9-962945e83add" alt="Product Added Successfully" width="300"/></td>
+      <td><img src="https://github.com/user-attachments/assets/f8c7e3c1-1fe8-4b54-87d7-30476cf44dc4" alt="Reports Tab Daily Summary" width="300"/></td>
+      <td><img src="https://github.com/user-attachments/assets/e9979718-b376-4574-96c0-dd0360df5e87" alt="Reports Tab Top Selling" width="300"/></td>
     </tr>
   </table>
 </div>
