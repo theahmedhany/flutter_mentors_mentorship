@@ -1,19 +1,12 @@
 # Smart Ahwa Manager 🍵☕
 
-A modern Flutter application for managing coffee shop orders, built with clean architecture and SOLID principles. This app demonstrates professional Flutter development practices, state management, and user interface design.
-
-<div align="center">
+<div align="left">
   <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>
   <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
   <img src="https://img.shields.io/badge/Material%20Design-757575?style=for-the-badge&logo=material-design&logoColor=white" alt="Material Design"/>
-  
-  <br/>
-  
-  <img src="https://img.shields.io/github/license/username/repo?style=flat-square&color=brown" alt="License"/>
-  <img src="https://img.shields.io/github/stars/username/repo?style=flat-square&color=brown" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/username/repo?style=flat-square&color=brown" alt="Forks"/>
-  <img src="https://img.shields.io/github/issues/username/repo?style=flat-square&color=brown" alt="Issues"/>
 </div>
+
+A modern Flutter application for managing coffee shop orders, built with clean architecture and SOLID principles. This app demonstrates professional Flutter development practices, state management, and user interface design.
 
 ## 📱 Features
 
