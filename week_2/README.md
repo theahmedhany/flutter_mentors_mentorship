@@ -137,7 +137,7 @@ lib/
 
 <table>
   <tr>
-    <td> <img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/745e0c53-bb84-4a62-9a48-de86b55dd2f3" /> </td>
+    <td> <img width="200" alt="Home Screen" src="https://github.com/user-attachments/assets/745e0c53-bb84-4a62-9a48-de86b55dd2f3" /> </td>
   </tr>
 </table>
 
@@ -151,8 +151,8 @@ lib/
 
 <table>
   <tr>
-    <td> <img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/be093350-3ef8-4b0d-811c-19446d2ab25d" /> </td>
-    <td> <img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/ddfd3e1e-1dc8-49f3-a760-49f20b7cf18f" /> </td>
+    <td> <img width="200" alt="Details Screen" src="https://github.com/user-attachments/assets/be093350-3ef8-4b0d-811c-19446d2ab25d" /> </td>
+    <td> <img width="200" alt="Details Screen" src="https://github.com/user-attachments/assets/ddfd3e1e-1dc8-49f3-a760-49f20b7cf18f" /> </td>
   </tr>
 </table>
 
@@ -166,7 +166,7 @@ lib/
 
 <table>
   <tr>
-    <td> <img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/0a984056-b833-4043-918c-991c031f15c9" /> </td>
+    <td> <img width="200" alt="Upgrade Plans Screen" src="https://github.com/user-attachments/assets/0a984056-b833-4043-918c-991c031f15c9" /> </td>
   </tr>
 </table>
 
