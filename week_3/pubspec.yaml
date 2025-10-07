@@ -1,0 +1,39 @@
+name: week_3
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  cupertino_icons: ^1.0.8
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_native_splash: ^2.4.6
+  flutter_screenutil: ^5.9.3
+  flutter_secure_storage: ^9.2.4
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  color: "#9775FA"
+  image: assets/master/splash_screen.png
+  android_12:
+    image: assets/master/splash_screen.png
+    color: "#9775FA"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/master/
