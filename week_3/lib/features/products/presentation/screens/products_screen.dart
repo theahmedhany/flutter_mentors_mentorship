@@ -77,20 +77,22 @@ class ProductsScreen extends StatelessWidget {
         surfaceTintColor: Colors.transparent,
       ),
 
-      body: GridView.builder(
-        physics: const BouncingScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: products.length,
-        padding: EdgeInsets.symmetric(horizontal: 20.r, vertical: 10.h),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 10.w,
-          mainAxisSpacing: 10.h,
-          mainAxisExtent: 290.h,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.r),
+        child: GridView.builder(
+          physics: const BouncingScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: products.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10.w,
+            mainAxisSpacing: 10.h,
+            mainAxisExtent: 290.h,
+          ),
+          itemBuilder: (context, index) {
+            return CustomProductCard(product: products[index], onTap: () {});
+          },
         ),
-        itemBuilder: (context, index) {
-          return CustomProductCard(product: products[index], onTap: () {});
-        },
       ),
     );
   }

@@ -68,9 +68,16 @@ class HomeScreen extends StatelessWidget {
               verticalSpace(20),
               const HomeSearchField(),
               verticalSpace(20),
-              HomeSectionHeader(title: "Choose Brand", press: () {}),
+              HomeSectionHeader(
+                title: "Choose Brand",
+                press: () {
+                  context.pushNamed(Routes.brandsScreen);
+                },
+              ),
               verticalSpace(8),
+
               const HomeBrandList(),
+
               verticalSpace(20),
               HomeSectionHeader(
                 title: "New Arrival",
@@ -79,6 +86,7 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
               verticalSpace(8),
+
               GridView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,

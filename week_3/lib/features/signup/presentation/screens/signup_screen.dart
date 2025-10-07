@@ -108,27 +108,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                 ),
 
-                verticalSpace(24),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Remember me",
-                      style: AppTextStyles.font16Regular.copyWith(
-                        color: LightAppColors.grey900,
-                      ),
-                    ),
-                    CupertinoSwitch(
-                      value: rememberMe,
-                      activeTrackColor: LightAppColors.primary500,
-                      onChanged: (value) {
-                        setState(() => rememberMe = value);
-                      },
-                    ),
-                  ],
-                ),
-
                 verticalSpace(80),
 
                 CustomAppButton(onPress: () {}, text: 'Sign Up'),

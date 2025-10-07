@@ -96,6 +96,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
 
+                verticalSpace(12),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    CupertinoButton(
+                      onPressed: () {
+                        context.pushNamed(Routes.verifyEmailScreen);
+                      },
+                      padding: EdgeInsets.zero,
+                      child: Text(
+                        "verify email",
+                        style: AppTextStyles.font16SemiBold.copyWith(
+                          color: LightAppColors.primary500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
                 verticalSpace(80),
 
                 CustomAppButton(
