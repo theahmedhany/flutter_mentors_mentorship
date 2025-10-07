@@ -98,7 +98,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 verticalSpace(80),
 
-                CustomAppButton(onPress: () {}, text: 'Login'),
+                CustomAppButton(
+                  onPress: () {
+                    context.pushReplacementNamed(Routes.mainHomeScreen);
+                  },
+                  text: 'Login',
+                ),
 
                 verticalSpace(12),
 

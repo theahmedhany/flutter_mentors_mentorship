@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:week_3/features/details/presentation/screens/product_details_screen.dart';
+import 'package:week_3/features/home/presentation/screens/main_home_screen.dart';
 import 'package:week_3/features/login/presentation/screens/login_screen.dart';
 import 'package:week_3/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:week_3/features/products/presentation/screens/products_screen.dart';
 import 'package:week_3/features/signup/presentation/screens/signup_screen.dart';
 
-import '../../features/home/presentation/screens/home_screen.dart';
 import 'routes.dart';
 
 class AppRouter {
@@ -22,8 +24,16 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
 
       // Home Screen
-      case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case Routes.mainHomeScreen:
+        return MaterialPageRoute(builder: (_) => const MainHomeScreen());
+
+      // Products Screen
+      case Routes.productsScreen:
+        return MaterialPageRoute(builder: (_) => ProductsScreen());
+
+      // Product Details Screen
+      case Routes.productDetailsScreen:
+        return MaterialPageRoute(builder: (_) => ProductDetailsScreen());
 
       default:
         return null;
