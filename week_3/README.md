@@ -77,10 +77,10 @@ flutter build ios --release
 
 <table>
   <tr>
-    <td> <img width="260" alt="Onboarding Screen" src="https://github.com/user-attachments/assets/59da2de9-7a15-49d4-ba87-f7db3c516e0a" /> </td>
-    <td> <img width="260" alt="Signup Screen" src="https://github.com/user-attachments/assets/0354693a-b172-40a2-b633-355878f09865" /> </td>
-    <td> <img width="260" alt="Verify Email Screen" src="https://github.com/user-attachments/assets/7bc3312c-e99e-4242-a7f4-610d5daee5d4" /> </td>
-    <td> <img width="260" alt="OTP Screen" src="https://github.com/user-attachments/assets/0243b945-3888-4868-8a3e-5e4bce7398a8" /> </td>
+    <td> <img width="25%" alt="Onboarding Screen" src="https://github.com/user-attachments/assets/59da2de9-7a15-49d4-ba87-f7db3c516e0a" /> </td>
+    <td> <img width="25%" alt="Signup Screen" src="https://github.com/user-attachments/assets/0354693a-b172-40a2-b633-355878f09865" /> </td>
+    <td> <img width="25%" alt="Verify Email Screen" src="https://github.com/user-attachments/assets/7bc3312c-e99e-4242-a7f4-610d5daee5d4" /> </td>
+    <td> <img width="25%" alt="OTP Screen" src="https://github.com/user-attachments/assets/0243b945-3888-4868-8a3e-5e4bce7398a8" /> </td>
   </tr>
 </table>
 
@@ -93,10 +93,10 @@ flutter build ios --release
 
 <table>
   <tr>
-    <td> <img width="260" alt="Splash Screen" src="https://github.com/user-attachments/assets/254a4978-e559-4b5e-972a-7da1b1557403" /> </td>
-    <td> <img width="260" alt="Home Screen" src="https://github.com/user-attachments/assets/d274a0d7-3ea5-4b76-99b1-49d5e55f5e3c" /> </td>
-    <td> <img width="260" alt="Favorites Screen" src="https://github.com/user-attachments/assets/f8e2f51e-ec17-49bc-87a7-d3fcca4d589f" /> </td>
-    <td> <img width="260" alt="User Screen" src="https://github.com/user-attachments/assets/82228094-3a9e-43fb-8f1b-9bd3ad26cd43" /> </td>
+    <td> <img width="25%" alt="Splash Screen" src="https://github.com/user-attachments/assets/254a4978-e559-4b5e-972a-7da1b1557403" /> </td>
+    <td> <img width="25%" alt="Home Screen" src="https://github.com/user-attachments/assets/d274a0d7-3ea5-4b76-99b1-49d5e55f5e3c" /> </td>
+    <td> <img width="25%" alt="Favorites Screen" src="https://github.com/user-attachments/assets/f8e2f51e-ec17-49bc-87a7-d3fcca4d589f" /> </td>
+    <td> <img width="25%" alt="User Screen" src="https://github.com/user-attachments/assets/82228094-3a9e-43fb-8f1b-9bd3ad26cd43" /> </td>
   </tr>
 </table>
 
@@ -109,10 +109,10 @@ flutter build ios --release
 
 <table>
   <tr>
-    <td> <img width="260" alt="Products Screen" src="https://github.com/user-attachments/assets/21671027-357f-4250-8c77-9cf4d682cf6c" /> </td>
-    <td> <img width="260" alt="Favorites Screen" src="https://github.com/user-attachments/assets/dfc919e8-2cfe-427d-a5f0-ae6b1ee6a910" /> </td>
-    <td> <img width="260" alt="Details Screen" src="https://github.com/user-attachments/assets/34452a54-5157-4ae8-b26e-b74bdb8c325c" /> </td>
-    <td> <img width="260" alt="Brands Screen" src="https://github.com/user-attachments/assets/4a289669-f41e-4319-90c1-7403c9715810" /> </td>
+    <td> <img width="25%" alt="Products Screen" src="https://github.com/user-attachments/assets/21671027-357f-4250-8c77-9cf4d682cf6c" /> </td>
+    <td> <img width="25%" alt="Favorites Screen" src="https://github.com/user-attachments/assets/dfc919e8-2cfe-427d-a5f0-ae6b1ee6a910" /> </td>
+    <td> <img width="25%" alt="Details Screen" src="https://github.com/user-attachments/assets/34452a54-5157-4ae8-b26e-b74bdb8c325c" /> </td>
+    <td> <img width="25%" alt="Brands Screen" src="https://github.com/user-attachments/assets/4a289669-f41e-4319-90c1-7403c9715810" /> </td>
   </tr>
 </table>
 
@@ -287,5 +287,7 @@ dart run build_runner build --delete-conflicting-outputs
 ## Demo and Resources
 
 #### To see **Laza** in action, check out the video below:
+
+https://github.com/user-attachments/assets/cc757499-c0b3-4c08-9abb-8921f41f12e0
 
 ---
