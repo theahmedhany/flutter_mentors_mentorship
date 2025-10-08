@@ -14,7 +14,7 @@ A modern and feature-rich e-commerce mobile application built with Flutter, show
   </tr>
 </table>
 
-## 🚀 How to Run the App
+## How to Run the App
 
 ### Prerequisites
 
@@ -214,7 +214,7 @@ feature/
 │   └── widgets/                    # Feature-specific widgets
 ```
 
-## 📦 Key Dependencies
+## Key Dependencies
 
 ### State Management & Architecture
 
@@ -267,7 +267,7 @@ dart run build_runner build --delete-conflicting-outputs
 - **Splash Screen**: Custom splash screen with app branding
 - **App Icons**: Configured for all platforms
 
-## 📈 Performance Optimizations
+## Performance Optimizations
 
 - **Image Caching**: Efficient image loading with automatic caching
 - **State Management**: Optimized state updates to prevent unnecessary rebuilds
@@ -275,7 +275,7 @@ dart run build_runner build --delete-conflicting-outputs
 - **Memory Management**: Proper disposal of resources and controllers
 - **Lazy Loading**: On-demand loading of heavy resources
 
-## 🔒 Security Features
+## Security Features
 
 - **Secure Storage**: Sensitive data encrypted using flutter_secure_storage
 - **Token Management**: JWT tokens securely stored and automatically refreshed
