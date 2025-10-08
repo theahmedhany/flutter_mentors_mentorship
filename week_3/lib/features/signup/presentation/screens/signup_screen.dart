@@ -1,24 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/common/widgets/custom_text_form_field.dart';
 import 'package:week_3/core/helpers/extensions.dart';
 import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/routing/routes.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+import 'package:week_3/features/signup/presentation/widgets/custom_signup_form.dart';
 
-class SignUpScreen extends StatefulWidget {
+class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
-
-  @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> {
-  bool rememberMe = true;
-  bool isPasswordVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -55,62 +46,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 verticalSpace(40),
 
-                CustomTextFormField(
-                  label: "First Name",
-                  hintText: "Enter your first name",
-                  validator: (value) {
-                    return null;
-                  },
-                ),
-
-                verticalSpace(20),
-
-                CustomTextFormField(
-                  label: "Last Name",
-                  hintText: "Enter your last name",
-                  validator: (value) {
-                    return null;
-                  },
-                ),
-
-                verticalSpace(20),
-
-                CustomTextFormField(
-                  label: "Email",
-                  hintText: "Enter your email",
-                  keyboardType: TextInputType.emailAddress,
-                  validator: (value) {
-                    return null;
-                  },
-                ),
-
-                verticalSpace(20),
-
-                CustomTextFormField(
-                  label: "Password",
-                  hintText: "Enter your password",
-                  isObscureText: !isPasswordVisible,
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      isPasswordVisible
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: LightAppColors.grey700,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        isPasswordVisible = !isPasswordVisible;
-                      });
-                    },
-                  ),
-                  validator: (value) {
-                    return null;
-                  },
-                ),
-
-                verticalSpace(80),
-
-                CustomAppButton(onPress: () {}, text: 'Sign Up'),
+                CustomSignupForm(),
 
                 verticalSpace(12),
 

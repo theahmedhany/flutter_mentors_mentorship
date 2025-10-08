@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:week_3/core/common/widgets/custom_alert_dialog.dart';
+import 'package:week_3/core/common/widgets/custom_loading.dart';
+import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
+import 'package:week_3/features/login/presentation/logic/login_cubit.dart';
+import 'package:week_3/features/login/presentation/logic/login_state.dart';
+
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/routing/routes.dart';
+
+class LoginBlocListener extends StatelessWidget {
+  const LoginBlocListener({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocListener<LoginCubit, LoginState>(
+      listenWhen: (previous, current) =>
+          current is Loading || current is Success || current is Error,
+      listener: (context, state) {
+        state.whenOrNull(
+          loading: () => _showLoadingDialog(context),
+          success: (loginResponse) {
+            context.pop();
+            context.pushNamedAndRemoveUntil(
+              Routes.mainHomeScreen,
+              predicate: (route) => false,
+            );
+          },
+          error: (error) => _showErrorDialog(context, error),
+        );
+      },
+      child: const SizedBox.shrink(),
+    );
+  }
+
+  void _showErrorDialog(BuildContext context, String error) {
+    context.pop();
+    showDialog(
+      context: context,
+      builder: (context) => CustomAlertDialog(
+        dialogColor: Colors.redAccent,
+        dialogHeader: 'Login Failed',
+        dialogBody: error,
+        dialogIcon: Icons.error,
+        press: () => context.pop(),
+      ),
+    );
+  }
+
+  void _showLoadingDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: LightAppColors.primary500.withValues(alpha: 0.3),
+      builder: (context) => const Center(child: CustomLoading()),
+    );
+  }
+}

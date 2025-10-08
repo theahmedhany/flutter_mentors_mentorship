@@ -1,23 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/common/widgets/custom_text_form_field.dart';
 import 'package:week_3/core/helpers/extensions.dart';
 import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/routing/routes.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+import 'package:week_3/features/login/presentation/widgets/custom_login_form.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  bool isPasswordVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -63,67 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 verticalSpace(40),
 
-                CustomTextFormField(
-                  label: "Email",
-                  hintText: "Enter your email",
-                  keyboardType: TextInputType.emailAddress,
-                  validator: (value) {
-                    return null;
-                  },
-                ),
-
-                verticalSpace(20),
-
-                CustomTextFormField(
-                  label: "Password",
-                  hintText: "Enter your password",
-                  isObscureText: !isPasswordVisible,
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      isPasswordVisible
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: LightAppColors.grey700,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        isPasswordVisible = !isPasswordVisible;
-                      });
-                    },
-                  ),
-                  validator: (value) {
-                    return null;
-                  },
-                ),
-
-                verticalSpace(12),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    CupertinoButton(
-                      onPressed: () {
-                        context.pushNamed(Routes.verifyEmailScreen);
-                      },
-                      padding: EdgeInsets.zero,
-                      child: Text(
-                        "verify email",
-                        style: AppTextStyles.font16SemiBold.copyWith(
-                          color: LightAppColors.primary500,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-
-                verticalSpace(80),
-
-                CustomAppButton(
-                  onPress: () {
-                    context.pushReplacementNamed(Routes.mainHomeScreen);
-                  },
-                  text: 'Login',
-                ),
+                CustomLoginForm(),
 
                 verticalSpace(12),
 

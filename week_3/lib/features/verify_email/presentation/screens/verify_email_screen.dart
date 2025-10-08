@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/common/widgets/custom_text_form_field.dart';
-import 'package:week_3/core/helpers/extensions.dart';
 import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/routing/routes.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+import 'package:week_3/features/verify_email/presentation/widgets/custom_verify_email_form.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
   const VerifyEmailScreen({super.key});
@@ -62,26 +59,7 @@ class VerifyEmailScreen extends StatelessWidget {
 
             verticalSpace(24),
 
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: CustomTextFormField(
-                hintText: 'Email',
-                label: '',
-                validator: (value) {},
-              ),
-            ),
-
-            verticalSpace(60),
-
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: CustomAppButton(
-                onPress: () {
-                  context.pushNamed(Routes.otpScreen);
-                },
-                text: 'Verify Email',
-              ),
-            ),
+            CustomVerifyEmailForm(),
 
             verticalSpace(24),
           ],

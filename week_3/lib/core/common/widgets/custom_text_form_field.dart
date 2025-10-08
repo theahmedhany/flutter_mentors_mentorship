@@ -65,6 +65,7 @@ class CustomTextFormField extends StatelessWidget {
             isDense: true,
             hintText: hintText,
             contentPadding: EdgeInsets.symmetric(vertical: 8.h),
+
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(
                 color: LightAppColors.grey400,
@@ -77,13 +78,13 @@ class CustomTextFormField extends StatelessWidget {
                 width: 1.5.w,
               ),
             ),
+
             errorBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: LightAppColors.error, width: 1.5.w),
-              borderRadius: BorderRadius.circular(16.r),
             ),
+
             focusedErrorBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: LightAppColors.error, width: 1.5.w),
-              borderRadius: BorderRadius.circular(16.r),
             ),
 
             disabledBorder: UnderlineInputBorder(
@@ -91,7 +92,6 @@ class CustomTextFormField extends StatelessWidget {
                 color: LightAppColors.grey400,
                 width: 1.5.w,
               ),
-              borderRadius: BorderRadius.circular(16.r),
             ),
 
             hintStyle:

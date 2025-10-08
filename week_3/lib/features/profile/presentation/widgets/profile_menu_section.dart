@@ -1,4 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:week_3/core/helpers/extensions.dart';
+import 'package:week_3/core/helpers/shared_pref_helper.dart';
+import 'package:week_3/core/routing/routes.dart';
 
 class ProfileMenuSection extends StatelessWidget {
   const ProfileMenuSection({super.key});
@@ -20,12 +24,13 @@ class ProfileMenuSection extends StatelessWidget {
           ],
         ),
         child: Column(
-          children: const [
+          children: [
             _MenuItem(
               icon: Icons.notifications_outlined,
               title: 'Notifications',
               subtitle: 'Configure notification preferences',
               color: Color(0xFFEC4899),
+              onTap: () {},
             ),
             _DividerLine(),
             _MenuItem(
@@ -33,6 +38,7 @@ class ProfileMenuSection extends StatelessWidget {
               title: 'Help & Support',
               subtitle: 'Get help and contact support',
               color: Color(0xFF14B8A6),
+              onTap: () {},
             ),
             _DividerLine(),
             _MenuItem(
@@ -40,6 +46,7 @@ class ProfileMenuSection extends StatelessWidget {
               title: 'About',
               subtitle: 'App version and information',
               color: Color(0xFFF59E0B),
+              onTap: () {},
             ),
             _DividerLine(),
             _MenuItem(
@@ -47,6 +54,14 @@ class ProfileMenuSection extends StatelessWidget {
               title: 'Logout',
               subtitle: 'Sign out of your account',
               color: Color(0xFFEF4444),
+              onTap: () async {
+                await SharedPrefHelper.clearAllSecuredData();
+                await SharedPrefHelper.clearAllData();
+                context.pushNamedAndRemoveUntil(
+                  Routes.onboardingScreen,
+                  predicate: (_) => false,
+                );
+              },
             ),
           ],
         ),
@@ -60,19 +75,21 @@ class _MenuItem extends StatelessWidget {
   final String title;
   final String subtitle;
   final Color color;
+  final VoidCallback onTap;
 
   const _MenuItem({
     required this.icon,
     required this.title,
     required this.subtitle,
     required this.color,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(16),
+    return CupertinoButton(
+      onPressed: onTap,
+      padding: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
