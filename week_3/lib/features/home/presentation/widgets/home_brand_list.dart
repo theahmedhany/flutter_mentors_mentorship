@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/features/brands/data/models/brands_model.dart';
-import 'package:week_3/features/brands/presentation/logic/brands_cubit.dart';
-import 'package:week_3/features/brands/presentation/logic/brands_state.dart';
-import 'package:week_3/features/home/presentation/widgets/brand_list_shimmer_loading.dart';
-import 'package:week_3/features/home/presentation/widgets/home_brand_list_item.dart';
+
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../brands/data/models/brands_model.dart';
+import '../../../brands/presentation/logic/brands_cubit.dart';
+import '../../../brands/presentation/logic/brands_state.dart';
+import 'brand_list_shimmer_loading.dart';
+import 'home_brand_list_item.dart';
 
 class HomeBrandList extends StatelessWidget {
   const HomeBrandList({super.key});

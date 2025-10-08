@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:week_3/core/networking/api_network_exceptions.dart';
+
+import '../../../../core/networking/api_network_exceptions.dart';
 
 part 'product_details_state.freezed.dart';
 

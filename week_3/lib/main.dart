@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/di/dependency_injection.dart';
-import 'package:week_3/core/utils/constants.dart';
 
+import 'core/di/dependency_injection.dart';
 import 'core/helpers/shared_pref_helper.dart';
 import 'core/routing/app_router.dart';
+import 'core/utils/constants.dart';
 import 'my_app.dart';
 
 void main() async {

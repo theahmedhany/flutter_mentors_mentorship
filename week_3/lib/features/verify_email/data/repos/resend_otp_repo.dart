@@ -1,8 +1,7 @@
-import 'package:week_3/features/verify_email/data/models/resend_otp/resend_otp_request_body.dart';
-
 import '../../../../core/networking/api_network_exceptions.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_services.dart';
+import '../models/resend_otp/resend_otp_request_body.dart';
 
 class ResendOtpRepo {
   final ApiServices _apiServices;

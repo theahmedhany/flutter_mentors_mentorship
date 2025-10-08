@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:week_3/core/common/widgets/custom_loading.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+
+import '../../../../core/common/widgets/custom_loading.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
 
 class BrandCard extends StatelessWidget {
   final String name;

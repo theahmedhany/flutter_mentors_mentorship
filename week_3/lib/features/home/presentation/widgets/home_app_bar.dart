@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
+
+import '../../../../core/theme/app_colors/light_app_colors.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});

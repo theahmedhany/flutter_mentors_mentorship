@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/common/widgets/custom_loading.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/details/data/models/product_details_model.dart';
-import 'package:week_3/features/details/presentation/logic/product_details_cubit.dart';
-import 'package:week_3/features/details/presentation/logic/product_details_state.dart';
-import 'package:week_3/features/details/presentation/widgets/product_description.dart';
-import 'package:week_3/features/details/presentation/widgets/product_details_header.dart';
-import 'package:week_3/features/details/presentation/widgets/product_details_image.dart';
-import 'package:week_3/features/details/presentation/widgets/product_details_size_guideline.dart';
+
+import '../../../../core/common/widgets/custom_app_button.dart';
+import '../../../../core/common/widgets/custom_loading.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
+import '../../data/models/product_details_model.dart';
+import '../logic/product_details_cubit.dart';
+import '../logic/product_details_state.dart';
+import '../widgets/product_description.dart';
+import '../widgets/product_details_header.dart';
+import '../widgets/product_details_image.dart';
+import '../widgets/product_details_size_guideline.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key, required this.productId});
@@ -71,7 +72,7 @@ class ProductDetailsScreen extends StatelessWidget {
 
                               CustomAppButton(
                                 onPress: () {
-                                  // Add to cart functionality
+                                  //TODO: Add to cart functionality
                                 },
                                 text: 'Add to cart',
                               ),

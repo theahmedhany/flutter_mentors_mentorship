@@ -128,13 +128,13 @@ return error(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  idle,TResult Function()?  loading,TResult Function( T data)?  success,TResult Function( ApiNetworkExceptions networkExceptions)?  error,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  idle,TResult Function()?  loading,TResult Function( T data)?  success,TResult Function( String error)?  error,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case Idle() when idle != null:
 return idle();case Loading() when loading != null:
 return loading();case Success() when success != null:
 return success(_that.data);case Error() when error != null:
-return error(_that.networkExceptions);case _:
+return error(_that.error);case _:
   return orElse();
 
 }
@@ -152,13 +152,13 @@ return error(_that.networkExceptions);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  idle,required TResult Function()  loading,required TResult Function( T data)  success,required TResult Function( ApiNetworkExceptions networkExceptions)  error,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  idle,required TResult Function()  loading,required TResult Function( T data)  success,required TResult Function( String error)  error,}) {final _that = this;
 switch (_that) {
 case Idle():
 return idle();case Loading():
 return loading();case Success():
 return success(_that.data);case Error():
-return error(_that.networkExceptions);case _:
+return error(_that.error);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -175,13 +175,13 @@ return error(_that.networkExceptions);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  idle,TResult? Function()?  loading,TResult? Function( T data)?  success,TResult? Function( ApiNetworkExceptions networkExceptions)?  error,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  idle,TResult? Function()?  loading,TResult? Function( T data)?  success,TResult? Function( String error)?  error,}) {final _that = this;
 switch (_that) {
 case Idle() when idle != null:
 return idle();case Loading() when loading != null:
 return loading();case Success() when success != null:
 return success(_that.data);case Error() when error != null:
-return error(_that.networkExceptions);case _:
+return error(_that.error);case _:
   return null;
 
 }
@@ -323,10 +323,10 @@ as T,
 
 
 class Error<T> implements FavoriteState<T> {
-  const Error(this.networkExceptions);
+  const Error({required this.error});
   
 
- final  ApiNetworkExceptions networkExceptions;
+ final  String error;
 
 /// Create a copy of FavoriteState
 /// with the given fields replaced by the non-null parameter values.
@@ -338,16 +338,16 @@ $ErrorCopyWith<T, Error<T>> get copyWith => _$ErrorCopyWithImpl<T, Error<T>>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Error<T>&&(identical(other.networkExceptions, networkExceptions) || other.networkExceptions == networkExceptions));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Error<T>&&(identical(other.error, error) || other.error == error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,networkExceptions);
+int get hashCode => Object.hash(runtimeType,error);
 
 @override
 String toString() {
-  return 'FavoriteState<$T>.error(networkExceptions: $networkExceptions)';
+  return 'FavoriteState<$T>.error(error: $error)';
 }
 
 
@@ -358,7 +358,7 @@ abstract mixin class $ErrorCopyWith<T,$Res> implements $FavoriteStateCopyWith<T,
   factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) _then) = _$ErrorCopyWithImpl;
 @useResult
 $Res call({
- ApiNetworkExceptions networkExceptions
+ String error
 });
 
 
@@ -375,10 +375,10 @@ class _$ErrorCopyWithImpl<T,$Res>
 
 /// Create a copy of FavoriteState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? networkExceptions = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = null,}) {
   return _then(Error<T>(
-null == networkExceptions ? _self.networkExceptions : networkExceptions // ignore: cast_nullable_to_non_nullable
-as ApiNetworkExceptions,
+error: null == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
+as String,
   ));
 }
 

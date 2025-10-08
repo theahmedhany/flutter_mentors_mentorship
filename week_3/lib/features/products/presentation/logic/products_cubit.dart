@@ -1,11 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/networking/api_result.dart';
-import 'package:week_3/features/products/data/models/products_models.dart';
-import 'package:week_3/features/products/data/repos/products_repo.dart';
-import 'package:week_3/features/products/presentation/logic/products_state.dart';
 
 import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_network_exceptions.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../data/models/products_models.dart';
+import '../../data/repos/products_repo.dart';
+import 'products_state.dart';
 
 class ProductsCubit extends Cubit<ProductsState<List<ProductItem>>> {
   final ProductsRepo productsRepo;

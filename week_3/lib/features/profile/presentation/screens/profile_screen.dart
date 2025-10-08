@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:week_3/core/helpers/spacing.dart';
 
+import '../../../../core/helpers/spacing.dart';
 import '../widgets/profile_info.dart';
 import '../widgets/profile_menu_section.dart';
 import '../widgets/profile_stats.dart';

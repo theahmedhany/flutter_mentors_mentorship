@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/networking/api_error_model.dart';
-import 'package:week_3/core/networking/api_network_exceptions.dart';
-import 'package:week_3/core/networking/api_result.dart';
-import 'package:week_3/features/details/data/models/product_details_model.dart';
-import 'package:week_3/features/details/data/repos/product_details_repo.dart';
 
+import '../../../../core/networking/api_error_model.dart';
+import '../../../../core/networking/api_network_exceptions.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../data/models/product_details_model.dart';
+import '../../data/repos/product_details_repo.dart';
 import 'product_details_state.dart';
 
 class ProductDetailsCubit

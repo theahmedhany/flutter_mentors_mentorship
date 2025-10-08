@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/common/widgets/custom_text_form_field.dart';
-import 'package:week_3/core/helpers/app_regex.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/features/signup/presentation/logic/signup_cubit.dart';
-import 'package:week_3/features/signup/presentation/widgets/signup_bloc_listener.dart';
+
+import '../../../../core/common/widgets/custom_app_button.dart';
+import '../../../../core/common/widgets/custom_text_form_field.dart';
+import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../logic/signup_cubit.dart';
+import 'signup_bloc_listener.dart';
 
 class CustomSignupForm extends StatefulWidget {
   const CustomSignupForm({super.key});

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/profile/data/models/user_profile_model.dart';
-import 'package:week_3/features/profile/presentation/logic/user_profile_cubit.dart';
-import 'package:week_3/features/profile/presentation/logic/user_profile_state.dart';
+
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
+import '../../data/models/user_profile_model.dart';
+import '../logic/user_profile_cubit.dart';
+import '../logic/user_profile_state.dart';
 
 class ProfileInfo extends StatelessWidget {
   const ProfileInfo({super.key});

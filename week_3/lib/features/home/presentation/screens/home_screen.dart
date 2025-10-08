@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/helpers/extensions.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/routing/routes.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/home/presentation/widgets/home_brand_list.dart';
-import 'package:week_3/features/home/presentation/widgets/home_search_field.dart';
-import 'package:week_3/features/home/presentation/widgets/home_section_header.dart';
-import 'package:week_3/features/products/presentation/widgets/all_products_list.dart';
 
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
+import '../../../products/presentation/widgets/all_products_list.dart';
 import '../widgets/home_app_bar.dart';
+import '../widgets/home_brand_list.dart';
+import '../widgets/home_search_field.dart';
+import '../widgets/home_section_header.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

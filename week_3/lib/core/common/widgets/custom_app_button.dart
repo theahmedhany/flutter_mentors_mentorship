@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+
+import '../../theme/app_colors/light_app_colors.dart';
+import '../../theme/app_texts/app_text_styles.dart';
 
 class CustomAppButton extends StatelessWidget {
   const CustomAppButton({super.key, required this.onPress, required this.text});

@@ -1,16 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/common/widgets/custom_text_form_field.dart';
-import 'package:week_3/core/helpers/app_regex.dart';
-import 'package:week_3/core/helpers/extensions.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/routing/routes.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/login/presentation/logic/login_cubit.dart';
-import 'package:week_3/features/login/presentation/widgets/login_bloc_listener.dart';
+
+import '../../../../core/common/widgets/custom_app_button.dart';
+import '../../../../core/common/widgets/custom_text_form_field.dart';
+import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
+import '../logic/login_cubit.dart';
+import 'login_bloc_listener.dart';
 
 class CustomLoginForm extends StatefulWidget {
   const CustomLoginForm({super.key});

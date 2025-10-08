@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
-import 'package:week_3/core/common/widgets/custom_app_button.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/verify_email/presentation/logic/verify_otp/verify_otp_cubit.dart';
-import 'package:week_3/features/verify_email/presentation/widgets/verify_otp_bloc_listener.dart';
+
+import '../../../../core/common/widgets/custom_app_button.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
+import '../logic/verify_otp/verify_otp_cubit.dart';
+import 'verify_otp_bloc_listener.dart';
 
 class CustomOtpVerifyForm extends StatefulWidget {
   final String email;

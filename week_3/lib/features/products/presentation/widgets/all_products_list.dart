@@ -1,14 +1,15 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/common/widgets/custom_product_card.dart';
-import 'package:week_3/core/common/widgets/products_shimmer_loading.dart';
-import 'package:week_3/core/helpers/extensions.dart';
-import 'package:week_3/core/routing/routes.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/features/products/data/models/products_models.dart';
-import 'package:week_3/features/products/presentation/logic/products_cubit.dart';
-import 'package:week_3/features/products/presentation/logic/products_state.dart';
+
+import '../../../../core/common/widgets/custom_product_card.dart';
+import '../../../../core/common/widgets/products_shimmer_loading.dart';
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../data/models/products_models.dart';
+import '../logic/products_cubit.dart';
+import '../logic/products_state.dart';
 
 class AllProductsList extends StatelessWidget {
   const AllProductsList({super.key, this.physics, this.wrap});

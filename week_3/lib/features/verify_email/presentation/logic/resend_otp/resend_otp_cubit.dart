@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/networking/api_result.dart';
-import 'package:week_3/features/verify_email/data/models/resend_otp/resend_otp_request_body.dart';
-import 'package:week_3/features/verify_email/data/repos/resend_otp_repo.dart';
-import 'package:week_3/features/verify_email/presentation/logic/resend_otp/resend_otp_state.dart';
+
+import '../../../../../core/networking/api_result.dart';
+import '../../../data/models/resend_otp/resend_otp_request_body.dart';
+import '../../../data/repos/resend_otp_repo.dart';
+import 'resend_otp_state.dart';
 
 class ResendOtpCubit extends Cubit<ResendOtpState> {
   final ResendOtpRepo _resendOtpRepo;

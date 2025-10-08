@@ -1,12 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:week_3/core/common/widgets/custom_loading.dart';
-import 'package:week_3/core/common/widgets/favorite_button.dart';
-import 'package:week_3/core/helpers/spacing.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/products/data/models/products_models.dart';
+
+import '../../../features/products/data/models/products_models.dart';
+import '../../helpers/spacing.dart';
+import '../../theme/app_colors/light_app_colors.dart';
+import '../../theme/app_texts/app_text_styles.dart';
+import 'custom_loading.dart';
+import 'favorite_button.dart';
 
 class CustomProductCard extends StatelessWidget {
   const CustomProductCard({

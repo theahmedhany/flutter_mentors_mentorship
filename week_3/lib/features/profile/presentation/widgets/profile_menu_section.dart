@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:week_3/core/helpers/extensions.dart';
-import 'package:week_3/core/helpers/shared_pref_helper.dart';
-import 'package:week_3/core/routing/routes.dart';
+
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/helpers/shared_pref_helper.dart';
+import '../../../../core/routing/routes.dart';
 
 class ProfileMenuSection extends StatelessWidget {
   const ProfileMenuSection({super.key});

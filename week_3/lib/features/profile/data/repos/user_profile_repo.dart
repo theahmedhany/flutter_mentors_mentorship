@@ -1,8 +1,7 @@
-import 'package:week_3/features/profile/data/models/user_profile_model.dart';
-
 import '../../../../core/networking/api_network_exceptions.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_services.dart';
+import '../models/user_profile_model.dart';
 
 class UserProfileRepo {
   final ApiServices apiServices;

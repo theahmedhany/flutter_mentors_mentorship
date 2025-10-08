@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/networking/api_result.dart';
-import 'package:week_3/features/verify_email/data/models/verify_otp/verify_otp_request_body.dart';
-import 'package:week_3/features/verify_email/data/repos/verify_otp_repo.dart';
-import 'package:week_3/features/verify_email/presentation/logic/verify_otp/verify_otp_state.dart';
+
+import '../../../../../core/networking/api_result.dart';
+import '../../../data/models/verify_otp/verify_otp_request_body.dart';
+import '../../../data/repos/verify_otp_repo.dart';
+import 'verify_otp_state.dart';
 
 class VerifyOtpCubit extends Cubit<VerifyOtpState> {
   final VerifyOtpRepo _verifyOtpRepo;

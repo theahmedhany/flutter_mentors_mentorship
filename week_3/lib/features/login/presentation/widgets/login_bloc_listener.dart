@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/common/widgets/custom_alert_dialog.dart';
-import 'package:week_3/core/common/widgets/custom_loading.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/features/login/presentation/logic/login_cubit.dart';
-import 'package:week_3/features/login/presentation/logic/login_state.dart';
 
+import '../../../../core/common/widgets/custom_alert_dialog.dart';
+import '../../../../core/common/widgets/custom_loading.dart';
 import '../../../../core/helpers/extensions.dart';
 import '../../../../core/routing/routes.dart';
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../logic/login_cubit.dart';
+import '../logic/login_state.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});

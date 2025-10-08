@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week_3/core/networking/api_result.dart';
-import 'package:week_3/core/utils/constants.dart';
-import 'package:week_3/features/login/data/models/login_request_body.dart';
-import 'package:week_3/features/login/data/repos/login_repo.dart';
 
 import '../../../../core/helpers/shared_pref_helper.dart';
+import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/dio_factory.dart';
+import '../../../../core/utils/constants.dart';
+import '../../data/models/login_request_body.dart';
+import '../../data/repos/login_repo.dart';
 import 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {

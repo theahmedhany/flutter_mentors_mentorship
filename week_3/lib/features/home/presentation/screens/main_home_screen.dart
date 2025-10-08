@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/favorite/presentation/screens/favorite_screen.dart';
-import 'package:week_3/features/home/presentation/screens/home_screen.dart';
-import 'package:week_3/features/home/presentation/widgets/main_home_navigation_bar_item.dart';
-import 'package:week_3/features/profile/presentation/screens/profile_screen.dart';
+
+import '../../../../core/theme/app_colors/light_app_colors.dart';
+import '../../../../core/theme/app_texts/app_text_styles.dart';
+import '../../../favorite/presentation/screens/favorite_screen.dart';
+import '../../../profile/presentation/screens/profile_screen.dart';
+import '../widgets/main_home_navigation_bar_item.dart';
+import 'home_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
   const MainHomeScreen({super.key});
