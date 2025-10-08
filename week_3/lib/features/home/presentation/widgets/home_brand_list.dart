@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:week_3/core/helpers/spacing.dart';
+import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
+import 'package:week_3/features/brands/data/models/brands_model.dart';
+import 'package:week_3/features/brands/presentation/logic/brands_cubit.dart';
+import 'package:week_3/features/brands/presentation/logic/brands_state.dart';
+import 'package:week_3/features/home/presentation/widgets/brand_list_shimmer_loading.dart';
 import 'package:week_3/features/home/presentation/widgets/home_brand_list_item.dart';
 
 class HomeBrandList extends StatelessWidget {
@@ -9,14 +16,27 @@ class HomeBrandList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 60.h,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: 8,
-        separatorBuilder: (_, __) => SizedBox(width: 8.w),
-        itemBuilder: (context, index) {
-          return HomeBrandListItem(
-            imagePath: "assets/images/placeholder_brand_image.png",
-            brandName: 'Brand ${index + 1}',
+      child: BlocBuilder<BrandsCubit, BrandsState<List<CategoryModel>>>(
+        builder: (context, state) {
+          return state.when(
+            idle: () => BrandListShimmerLoading(),
+            loading: () => BrandListShimmerLoading(),
+            success: (data) {
+              return ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: data.length,
+                separatorBuilder: (context, index) => horizontalSpace(8),
+                itemBuilder: (context, index) {
+                  final category = data[index];
+                  return HomeBrandListItem(
+                    imagePath: category.coverPictureUrl,
+                    brandName: category.name,
+                  );
+                },
+              );
+            },
+            error: (error) =>
+                BrandListShimmerLoading(baseColor: LightAppColors.error),
           );
         },
       ),

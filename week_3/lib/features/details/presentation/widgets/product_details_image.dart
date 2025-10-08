@@ -3,19 +3,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:week_3/core/common/widgets/custom_loading.dart';
+import 'package:week_3/core/common/widgets/favorite_button.dart';
 import 'package:week_3/core/helpers/extensions.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
-import 'package:week_3/features/favorite/presentation/widgets/favorite_button.dart';
+import 'package:week_3/features/details/data/models/product_details_model.dart';
 
 class ProductDetailsImage extends StatelessWidget {
-  const ProductDetailsImage({super.key, required this.imageSrc});
+  const ProductDetailsImage({super.key, required this.item});
 
-  final String imageSrc;
+  final ProductDetailsModel item;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400.h,
+      height: 460.h,
       child: Stack(
         children: [
           ClipRRect(
@@ -24,13 +25,20 @@ class ProductDetailsImage extends StatelessWidget {
               bottomRight: Radius.circular(24.r),
             ),
             child: Container(
-              height: 400.h,
+              height: 500.h,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: LightAppColors.primary500.withValues(alpha: 0.4),
+                boxShadow: [
+                  BoxShadow(
+                    color: LightAppColors.grey400.withValues(alpha: 0.4),
+                    blurRadius: 10.r,
+                    offset: Offset(0, 5.h),
+                  ),
+                ],
               ),
               child: CachedNetworkImage(
-                imageUrl: imageSrc,
+                imageUrl: item.coverPictureUrl,
                 fit: BoxFit.cover,
                 placeholder: (context, url) {
                   return const Center(child: CustomLoading());
@@ -58,7 +66,12 @@ class ProductDetailsImage extends StatelessWidget {
                 color: LightAppColors.grey300,
                 shape: BoxShape.circle,
               ),
-              child: FavoriteButton(),
+              child: FavoriteButton(
+                itemId: item.id,
+                name: item.name,
+                imageUrl: item.coverPictureUrl,
+                price: item.price,
+              ),
             ),
           ),
 

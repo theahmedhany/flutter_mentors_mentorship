@@ -1,11 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+import 'package:week_3/features/profile/data/models/user_profile_model.dart';
+import 'package:week_3/features/profile/presentation/logic/user_profile_cubit.dart';
+import 'package:week_3/features/profile/presentation/logic/user_profile_state.dart';
 
 class ProfileInfo extends StatelessWidget {
   const ProfileInfo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<UserProfileCubit, UserProfileState<UserProfileModel>>(
+      builder: (context, state) {
+        return state.when(
+          idle: () => const UserProfileInfo(
+            name: 'Loading Name',
+            email: 'Loading Email',
+          ),
+          loading: () => const UserProfileInfo(
+            name: 'Loading Name',
+            email: 'Loading Email',
+          ),
+          success: (data) {
+            return UserProfileInfo(name: data.fullName, email: data.email);
+          },
+          error: (error) {
+            return UserProfileInfo(name: 'Error Name', email: 'Error Email');
+          },
+        );
+      },
+    );
+  }
+}
+
+class UserProfileInfo extends StatelessWidget {
+  const UserProfileInfo({super.key, required this.name, required this.email});
+
+  final String name, email;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +67,7 @@ class ProfileInfo extends StatelessWidget {
         verticalSpace(24),
 
         Text(
-          'Alexander Morgan',
+          name,
           style: AppTextStyles.font24Bold.copyWith(
             color: LightAppColors.grey900,
           ),
@@ -42,7 +76,7 @@ class ProfileInfo extends StatelessWidget {
         verticalSpace(8),
 
         Text(
-          'Senior Product Designer',
+          email,
           style: AppTextStyles.font16SemiBold.copyWith(
             color: LightAppColors.grey600,
           ),

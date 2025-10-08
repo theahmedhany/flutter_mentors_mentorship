@@ -1,6 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:week_3/core/common/widgets/custom_loading.dart';
 import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
@@ -52,21 +52,15 @@ class BrandCard extends StatelessWidget {
                     width: 1.5.w,
                   ),
                 ),
-                child: CachedNetworkImage(
-                  imageUrl: imageUrl,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) {
-                    return const Center(child: CustomLoading());
-                  },
-                  errorWidget: (context, url, error) {
-                    return Center(
-                      child: Image.asset(
-                        'assets/master/logo.png',
-                        width: 50.w,
-                        fit: BoxFit.contain,
-                      ),
-                    );
-                  },
+                child: Center(
+                  child: SvgPicture.network(
+                    imageUrl,
+                    fit: BoxFit.cover,
+                    placeholderBuilder: (context) =>
+                        const Center(child: CustomLoading()),
+                    height: 40.h,
+                    width: 40.w,
+                  ),
                 ),
               ),
             ),

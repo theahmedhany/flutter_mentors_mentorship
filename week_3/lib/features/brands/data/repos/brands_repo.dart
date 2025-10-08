@@ -1,0 +1,20 @@
+import 'package:week_3/features/brands/data/models/brands_model.dart';
+
+import '../../../../core/networking/api_network_exceptions.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/api_services.dart';
+
+class BrandsRepo {
+  final ApiServices apiServices;
+
+  BrandsRepo(this.apiServices);
+
+  Future<ApiResult<BrandsModel>> getAllBrands() async {
+    try {
+      var response = await apiServices.getAllBrands();
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(ApiNetworkExceptions.getDioException(error));
+    }
+  }
+}

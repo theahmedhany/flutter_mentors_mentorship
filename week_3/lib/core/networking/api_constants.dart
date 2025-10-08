@@ -8,8 +8,8 @@ class ApiConstants {
 
   static const String apiUserDetails = "auth/me";
 
-  static const String apiProducts = "api/products";
-  static const String apiCategories = "api/categories";
+  static const String apiProducts = "products";
+  static const String apiCategories = "categories";
 }
 
 class ApiErrors {

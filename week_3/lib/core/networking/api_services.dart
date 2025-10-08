@@ -1,7 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:week_3/features/brands/data/models/brands_model.dart';
+import 'package:week_3/features/details/data/models/product_details_model.dart';
 import 'package:week_3/features/login/data/models/login_request_body.dart';
 import 'package:week_3/features/login/data/models/login_response.dart';
+import 'package:week_3/features/products/data/models/products_models.dart';
+import 'package:week_3/features/profile/data/models/user_profile_model.dart';
 import 'package:week_3/features/signup/data/models/signup_request_body.dart';
 import 'package:week_3/features/signup/data/models/signup_response.dart';
 import 'package:week_3/features/verify_email/data/models/resend_otp/resend_otp_request_body.dart';
@@ -31,13 +35,19 @@ abstract class ApiServices {
   @POST(ApiConstants.apiVerifyEmail)
   Future<String> verifyEmail(@Body() VerifyOtpRequestBody verifyOtpRequestBody);
 
-  // Student Written Exam Submissions API
-  // @GET(ApiConstants.apiStudentWrittenExamSubmissions)
-  // Future<List<StudentWrittenSubmissionsModel>> getStudentWrittenExamSubmissions(
-  //   @Query('examId') String examId,
-  // );
+  // User Profile API
+  @GET(ApiConstants.apiUserDetails)
+  Future<UserProfileModel> getUserProfile();
 
-  // All Notifications API
-  // @GET(ApiConstants.apiAllNotifications)
-  // Future<List<NotificationsModel>> getAllNotifications();
+  // All Brands API
+  @GET(ApiConstants.apiCategories)
+  Future<BrandsModel> getAllBrands();
+
+  // All Products API
+  @GET(ApiConstants.apiProducts)
+  Future<ProductsModels> getAllProducts();
+
+  // Get Product Details API
+  @GET('${ApiConstants.apiProducts}/{Id}')
+  Future<ProductDetailsModel> getProductDetails(@Path('Id') String productId);
 }

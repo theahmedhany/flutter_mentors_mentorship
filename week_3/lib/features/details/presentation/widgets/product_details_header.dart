@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
+import 'package:week_3/features/details/data/models/product_details_model.dart';
 
 class ProductDetailsHeader extends StatelessWidget {
-  final Map<String, dynamic> product;
+  final ProductDetailsModel product;
   final double discountedPrice;
 
   const ProductDetailsHeader({
@@ -23,7 +24,7 @@ class ProductDetailsHeader extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                product['name'],
+                product.color,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: AppTextStyles.font16Regular.copyWith(
@@ -47,7 +48,7 @@ class ProductDetailsHeader extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                product['name'],
+                product.name,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: AppTextStyles.font24Bold.copyWith(
@@ -71,16 +72,16 @@ class ProductDetailsHeader extends StatelessWidget {
 
         Row(
           children: [
-            _buildRatingStars(product['rating']),
+            _buildRatingStars(product.rating),
             horizontalSpace(8),
             Text(
-              '${product['rating'].toStringAsFixed(1)} (${product['reviewsCount']} reviews)',
+              '${product.rating.toStringAsFixed(1)} (${product.reviewsCount} reviews)',
               style: AppTextStyles.font14Regular.copyWith(
                 color: LightAppColors.grey600,
               ),
             ),
             const Spacer(),
-            if (product['discountPercentage'] > 0)
+            if (product.discountPercentage > 0)
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 6.r, vertical: 2.r),
                 decoration: BoxDecoration(
@@ -88,7 +89,7 @@ class ProductDetailsHeader extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4.r),
                 ),
                 child: Text(
-                  '${product['discountPercentage']}% OFF',
+                  '${product.discountPercentage}% OFF',
                   style: AppTextStyles.font12SemiBold.copyWith(
                     color: LightAppColors.white,
                   ),

@@ -2,20 +2,21 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:week_3/core/common/widgets/custom_loading.dart';
+import 'package:week_3/core/common/widgets/favorite_button.dart';
 import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 import 'package:week_3/core/theme/app_texts/app_text_styles.dart';
-import 'package:week_3/features/favorite/presentation/widgets/favorite_button.dart';
-import 'package:week_3/features/home/presentation/screens/home_screen.dart';
+import 'package:week_3/features/products/data/models/products_models.dart';
 
 class CustomProductCard extends StatelessWidget {
-  final ProductModel product;
-  final VoidCallback onTap;
   const CustomProductCard({
     super.key,
     required this.product,
     required this.onTap,
   });
+
+  final ProductItem product;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,10 @@ class CustomProductCard extends StatelessWidget {
       padding: EdgeInsets.zero,
       onPressed: onTap,
       child: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16.r)),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16.r),
+          border: Border.all(color: LightAppColors.primary200, width: 1.5.w),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -38,7 +42,7 @@ class CustomProductCard extends StatelessWidget {
                       color: LightAppColors.primary500.withValues(alpha: 0.4),
                     ),
                     child: CachedNetworkImage(
-                      imageUrl: product.image,
+                      imageUrl: product.coverPictureUrl,
                       fit: BoxFit.cover,
                       placeholder: (context, url) {
                         return const Center(child: CustomLoading());
@@ -56,7 +60,16 @@ class CustomProductCard extends StatelessWidget {
                   ),
                 ),
 
-                Positioned(top: 8.r, right: 8.r, child: FavoriteButton()),
+                Positioned(
+                  top: 8.r,
+                  right: 8.r,
+                  child: FavoriteButton(
+                    itemId: product.id,
+                    name: product.name,
+                    imageUrl: product.coverPictureUrl,
+                    price: product.price,
+                  ),
+                ),
               ],
             ),
             Padding(

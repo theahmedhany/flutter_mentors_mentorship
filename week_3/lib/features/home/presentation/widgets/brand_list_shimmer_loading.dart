@@ -5,7 +5,9 @@ import 'package:week_3/core/helpers/spacing.dart';
 import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 
 class BrandListShimmerLoading extends StatelessWidget {
-  const BrandListShimmerLoading({super.key});
+  const BrandListShimmerLoading({super.key, this.baseColor});
+
+  final Color? baseColor;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,9 @@ class BrandListShimmerLoading extends StatelessWidget {
         itemCount: 8,
         separatorBuilder: (_, __) => horizontalSpace(8),
         itemBuilder: (context, index) {
-          return const HomeBrandListItemShimmer();
+          return HomeBrandListItemShimmer(
+            baseColor: baseColor ?? LightAppColors.grey200,
+          );
         },
       ),
     );
@@ -24,7 +28,9 @@ class BrandListShimmerLoading extends StatelessWidget {
 }
 
 class HomeBrandListItemShimmer extends StatelessWidget {
-  const HomeBrandListItemShimmer({super.key});
+  const HomeBrandListItemShimmer({super.key, required this.baseColor});
+
+  final Color baseColor;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +45,7 @@ class HomeBrandListItemShimmer extends StatelessWidget {
         children: [
           Shimmer.fromColors(
             baseColor: LightAppColors.background,
-            highlightColor: LightAppColors.grey200,
+            highlightColor: baseColor,
             child: SizedBox(
               child: Container(
                 height: double.infinity,
@@ -59,7 +65,7 @@ class HomeBrandListItemShimmer extends StatelessWidget {
               children: [
                 Shimmer.fromColors(
                   baseColor: LightAppColors.background,
-                  highlightColor: LightAppColors.grey200,
+                  highlightColor: baseColor,
                   child: Container(
                     height: 14.h,
                     width: double.infinity,
@@ -72,7 +78,7 @@ class HomeBrandListItemShimmer extends StatelessWidget {
                 verticalSpace(4),
                 Shimmer.fromColors(
                   baseColor: LightAppColors.background,
-                  highlightColor: LightAppColors.grey200,
+                  highlightColor: baseColor,
                   child: Container(
                     height: 10.h,
                     width: 40.w,

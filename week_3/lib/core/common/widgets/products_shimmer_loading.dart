@@ -6,8 +6,9 @@ import 'package:week_3/core/theme/app_colors/light_app_colors.dart';
 
 class ProductsShimmerLoading extends StatelessWidget {
   final int itemCount;
+  final Color? baseColor;
 
-  const ProductsShimmerLoading({super.key, this.itemCount = 8});
+  const ProductsShimmerLoading({super.key, this.itemCount = 8, this.baseColor});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class ProductsShimmerLoading extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
       itemCount: itemCount,
+      padding: EdgeInsets.symmetric(vertical: 16.r),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 10.w,
@@ -22,27 +24,32 @@ class ProductsShimmerLoading extends StatelessWidget {
         mainAxisExtent: 290.h,
       ),
       itemBuilder: (context, index) {
-        return const ProductCardShimmer();
+        return ProductCardShimmer(
+          baseColor: baseColor ?? LightAppColors.grey300,
+        );
       },
     );
   }
 }
 
 class ProductCardShimmer extends StatelessWidget {
-  const ProductCardShimmer({super.key});
+  const ProductCardShimmer({super.key, required this.baseColor});
+
+  final Color baseColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.r),
+        border: Border.all(color: LightAppColors.primary200, width: 1.5.w),
         color: LightAppColors.background,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Shimmer.fromColors(
-            baseColor: LightAppColors.grey300,
+            baseColor: baseColor,
             highlightColor: LightAppColors.grey100,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16.r),
@@ -60,7 +67,7 @@ class ProductCardShimmer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Shimmer.fromColors(
-                  baseColor: LightAppColors.grey300,
+                  baseColor: baseColor,
                   highlightColor: LightAppColors.grey100,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +96,7 @@ class ProductCardShimmer extends StatelessWidget {
                 verticalSpace(6),
 
                 Shimmer.fromColors(
-                  baseColor: LightAppColors.grey300,
+                  baseColor: baseColor,
                   highlightColor: LightAppColors.grey100,
                   child: Container(
                     height: 18.h,
