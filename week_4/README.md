@@ -9,9 +9,10 @@ A modern, feature-rich Flutter application that helps users discover and explore
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/890faea8-6f32-47f7-8213-24dbd2f75648" alt="Onboarding Screen" width="230"/></td>
-    <td><img src="https://github.com/user-attachments/assets/065a9321-6c8d-4e21-a4ba-e759db1ae338" alt="Splash Screen" width="230"/></td>
-    <td><img src="https://github.com/user-attachments/assets/f36000e1-7468-4657-8792-0466bd9beb1b" alt="Home Screen" width="230"/></td>
+    <td><img src="https://github.com/user-attachments/assets/065a9321-6c8d-4e21-a4ba-e759db1ae338" alt="Splash Screen" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/890faea8-6f32-47f7-8213-24dbd2f75648" alt="Onboarding Screen" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/f36000e1-7468-4657-8792-0466bd9beb1b" alt="Home Screen" width="250"/></td>
+
   </tr>
 </table>
 
