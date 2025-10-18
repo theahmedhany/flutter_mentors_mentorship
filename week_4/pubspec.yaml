@@ -1,0 +1,53 @@
+name: week_4
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  cached_network_image: ^3.4.1
+  cupertino_icons: ^1.0.8
+  dio: ^5.9.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_native_splash: ^2.4.7
+  flutter_screenutil: ^5.9.3
+  flutter_secure_storage: ^9.2.4
+  freezed: ^3.2.3
+  freezed_annotation: ^3.1.0
+  get_it: ^8.2.0
+  json_serializable: ^6.11.1
+  pretty_dio_logger: ^1.4.0
+  retrofit: ^4.7.3
+  retrofit_generator: ^10.0.6
+  shared_preferences: ^2.5.3
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  mockito: ^5.4.4
+  mocktail: ^1.0.3
+  bloc_test: ^9.1.5
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  color: "#FFFFFF" # Color of the background of the splash screen
+  image: assets/images/splash_screen.png # image path
+  android_12:
+    image: assets/images/splash_screen.png # image path
+    color: "#FFFFFF" # Color of the background of the splash screen
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
