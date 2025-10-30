@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:week_6/core/common/widgets/custom_loading.dart';
-import 'package:week_6/features/home/presentation/screens/home_screen.dart';
+import 'package:week_6/features/home/data/models/all_movies_model.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theme/app_texts/app_text_styles.dart';
@@ -11,7 +11,7 @@ import '../../../../core/theme/theme_manager/theme_extensions.dart';
 class AllMoviesCard extends StatelessWidget {
   const AllMoviesCard({super.key, required this.movie, required this.onTap});
 
-  final MovieItem movie;
+  final MovieModel movie;
   final VoidCallback onTap;
 
   @override
@@ -45,7 +45,8 @@ class AllMoviesCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.r),
                   child: CachedNetworkImage(
-                    imageUrl: movie.imageUrl,
+                    imageUrl:
+                        'https://image.tmdb.org/t/p/w500${movie.posterPath}',
                     width: double.infinity,
                     fit: BoxFit.cover,
                     placeholder: (context, url) {
@@ -94,7 +95,7 @@ class AllMoviesCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    movie.name,
+                    movie.title ?? 'No Title',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: AppTextStyles.font14SemiBold.copyWith(
@@ -112,7 +113,7 @@ class AllMoviesCard extends StatelessWidget {
                       horizontalSpace(4),
                       Expanded(
                         child: Text(
-                          movie.location,
+                          movie.originalLanguage?.toUpperCase() ?? 'N/A',
                           style: AppTextStyles.font12Regular.copyWith(
                             color: context.customAppColors.grey600,
                           ),
@@ -132,7 +133,9 @@ class AllMoviesCard extends StatelessWidget {
                       horizontalSpace(4),
                       Expanded(
                         child: Text(
-                          movie.rating,
+                          movie.voteAverage != null
+                              ? '${movie.voteAverage!.toStringAsFixed(1)} / 10'
+                              : 'N/A',
                           style: AppTextStyles.font12Regular.copyWith(
                             color: context.customAppColors.grey600,
                           ),
