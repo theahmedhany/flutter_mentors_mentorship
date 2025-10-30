@@ -5,9 +5,10 @@ import 'package:week_6/core/theme/app_texts/app_text_styles.dart';
 import 'package:week_6/core/theme/theme_manager/theme_extensions.dart';
 
 class MovieGenreBadge extends StatelessWidget {
-  const MovieGenreBadge({super.key, required this.genre});
+  const MovieGenreBadge({super.key, required this.genre, this.icon});
 
   final String genre;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class MovieGenreBadge extends StatelessWidget {
       child: Row(
         children: [
           Icon(
-            Icons.movie_filter_outlined,
+            icon ?? Icons.movie_filter_outlined,
             size: 16.w,
             color: context.customAppColors.primary800,
           ),

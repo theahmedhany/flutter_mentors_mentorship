@@ -1,4 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:week_6/features/details/data/models/movie_details_model.dart';
 import 'package:week_6/features/home/data/models/all_movies_model.dart';
 
 class HiveCacheAdapters {
@@ -9,6 +10,21 @@ class HiveCacheAdapters {
     }
     if (!Hive.isAdapterRegistered(1)) {
       Hive.registerAdapter(MovieModelAdapter());
+    }
+    if (!Hive.isAdapterRegistered(2)) {
+      Hive.registerAdapter(MovieDetailsModelAdapter());
+    }
+    if (!Hive.isAdapterRegistered(3)) {
+      Hive.registerAdapter(GenreAdapter());
+    }
+    if (!Hive.isAdapterRegistered(4)) {
+      Hive.registerAdapter(ProductionCompanyAdapter());
+    }
+    if (!Hive.isAdapterRegistered(5)) {
+      Hive.registerAdapter(ProductionCountryAdapter());
+    }
+    if (!Hive.isAdapterRegistered(6)) {
+      Hive.registerAdapter(SpokenLanguageAdapter());
     }
   }
 

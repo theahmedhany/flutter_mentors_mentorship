@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:week_6/features/details/data/models/movie_details_model.dart';
 import 'package:week_6/features/home/data/models/all_movies_model.dart';
 
 import 'api_constants.dart';
@@ -13,4 +14,8 @@ abstract class ApiServices {
   // All Movies API
   @GET(ApiConstants.apiAllMovies)
   Future<AllMoviesModel> allMovies(@Query('page') String page);
+
+  // Movie Details API
+  @GET(ApiConstants.apiMovieDetails)
+  Future<MovieDetailsModel> movieDetails(@Path('movie_id') int id);
 }

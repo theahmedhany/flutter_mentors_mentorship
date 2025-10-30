@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:week_6/features/details/data/cache/movie_details_cache_service.dart';
+import 'package:week_6/features/details/data/repos/movie_details_repo.dart';
+import 'package:week_6/features/details/presentation/logic/movie_details_cubit.dart';
 import 'package:week_6/features/home/data/cache/movies_cache_service.dart';
 import 'package:week_6/features/home/data/repos/all_movies_repo.dart';
 import 'package:week_6/features/home/presentation/logic/all_movies_cubit.dart';
@@ -18,4 +21,15 @@ Future<void> initGetIt() async {
   getIt.registerLazySingleton<MoviesCacheService>(() => MoviesCacheService());
   getIt.registerLazySingleton<AllMoviesRepo>(() => AllMoviesRepo(getIt()));
   getIt.registerFactory<AllMoviesCubit>(() => AllMoviesCubit(getIt(), getIt()));
+
+  // Movie Details
+  getIt.registerLazySingleton<MovieDetailsCacheService>(
+    () => MovieDetailsCacheService(),
+  );
+  getIt.registerLazySingleton<MovieDetailsRepo>(
+    () => MovieDetailsRepo(getIt()),
+  );
+  getIt.registerFactory<MovieDetailsCubit>(
+    () => MovieDetailsCubit(getIt(), getIt()),
+  );
 }

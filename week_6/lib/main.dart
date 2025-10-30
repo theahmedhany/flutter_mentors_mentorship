@@ -11,6 +11,7 @@ import 'package:week_6/core/routing/routes.dart';
 import 'package:week_6/core/theme/theme_data/dark_them_data.dart';
 import 'package:week_6/core/theme/theme_data/light_theme_data.dart';
 import 'package:week_6/core/theme/theme_manager/theme_cubit.dart';
+import 'package:week_6/features/details/data/cache/movie_details_cache_service.dart';
 import 'package:week_6/features/home/data/cache/movies_cache_service.dart';
 
 void main() async {
@@ -23,6 +24,7 @@ void main() async {
 
   await HiveCacheAdapters.init();
   await MoviesCacheService.init();
+  await MovieDetailsCacheService.init();
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   SystemChrome.setSystemUIOverlayStyle(

@@ -4,10 +4,11 @@ class ApiConstants {
       "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMjlkN2ExNzk4OWExNDU0MjJiNmIwMjMwYzBhNDdiZCIsIm5iZiI6MTc2MTgyMDQ2My40NzIsInN1YiI6IjY5MDMzZjJmMjFjYjMxMGQzODlhN2I4MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8R-x3Lbh_uIoEKV-SmJdN17goI0hfY6wpNOjsUQKXmg";
 
   // Base URL for the API
-  static const String apiBaseUrl = "https://api.themoviedb.org/3/movie/";
+  static const String apiBaseUrl = "https://api.themoviedb.org/3/";
 
   // All Movies
-  static const String apiAllMovies = "popular";
+  static const String apiAllMovies = "movie/popular";
+  static const String apiMovieDetails = "movie/{movie_id}";
 }
 
 class ApiErrors {

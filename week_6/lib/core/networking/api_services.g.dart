@@ -13,7 +13,7 @@ class _ApiServices implements ApiServices {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://api.themoviedb.org/3/movie/';
+    baseUrl ??= 'https://api.themoviedb.org/3/';
   }
 
   final Dio _dio;
@@ -34,7 +34,7 @@ class _ApiServices implements ApiServices {
     )
             .compose(
               _dio.options,
-              'popular',
+              'movie/popular',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -44,6 +44,33 @@ class _ApiServices implements ApiServices {
               baseUrl,
             ))));
     final value = AllMoviesModel.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<MovieDetailsModel> movieDetails(int id) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<MovieDetailsModel>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'movie/${id}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = MovieDetailsModel.fromJson(_result.data!);
     return value;
   }
 

@@ -27,7 +27,6 @@ class AllMoviesModel extends HiveObject {
 
   Map<String, dynamic> toJson() => _$AllMoviesModelToJson(this);
 
-  /// Creates a new instance to avoid HiveObject key conflicts
   AllMoviesModel copyWith({
     int? page,
     List<MovieModel>? results,
