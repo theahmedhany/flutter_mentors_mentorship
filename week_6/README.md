@@ -173,29 +173,32 @@ flutter build ios --release
 <table align="center">
   <tr>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/a1d395d8-a4a0-4686-84b9-0d35a6a8411b" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/a1d395d8-a4a0-4686-84b9-0d35a6a8411b" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/82598991-d252-4dee-9f71-e31ef357e344" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/82598991-d252-4dee-9f71-e31ef357e344" alt="MovieHub" />
     </td>
   </tr>
   <tr>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/492139bf-eb2d-43e3-83e9-f54589e280ad" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/492139bf-eb2d-43e3-83e9-f54589e280ad" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/68ac9496-6b4b-4464-a78f-38a417cb016f" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/68ac9496-6b4b-4464-a78f-38a417cb016f" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/2aa60d10-2e1f-4f88-aa7b-74ae6a531239" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/2aa60d10-2e1f-4f88-aa7b-74ae6a531239" alt="MovieHub" />
     </td>
   </tr>
     <tr>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/576bcecc-c9b1-4b5a-b4fa-f1b3264314a9" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/576bcecc-c9b1-4b5a-b4fa-f1b3264314a9" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/f296a592-e522-46e0-836f-5ff023c62d8a" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/08d84f3f-8993-40f7-b311-b95fb7590530" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="400" src="https://github.com/user-attachments/assets/f296a592-e522-46e0-836f-5ff023c62d8a" alt="MovieHub" />
     </td>
   </tr>
 </table>
@@ -362,42 +365,34 @@ feature/
 - **flutter_lints** (^5.0.0) - Recommended Flutter linting rules
 - **flutter_test** - Flutter testing framework
 
-<table align="center" style="border-collapse: collapse; text-align: center;">
-  <!-- Top row (2 images, centered) -->
-  <tr>
-    <td style="width: 100px;"></td>
-    <td>
-      <img height="300" src="https://github.com/user-attachments/assets/d32dca3d-205a-4ad3-996a-a43589fb4158" alt="MovieHub" />
-    </td>
-    <td>
-      <img height="300" src="https://github.com/user-attachments/assets/ea272621-4ee7-4c61-a53f-230341bb34cc" alt="MovieHub" />
-    </td>
-    <td style="width: 100px;"></td>
-  </tr>
-
-  <!-- Middle row (3 images, full width) -->
+<table align="center">
   <tr>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/6dff2ce5-9a76-4d1b-b759-8289b9c546be" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/d32dca3d-205a-4ad3-996a-a43589fb4158" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/1633f34b-1555-403d-b695-d9df34ca3197" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/ea272621-4ee7-4c61-a53f-230341bb34cc" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/14683de8-bf13-46ae-bc3b-f55038cb8ea9" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/6dff2ce5-9a76-4d1b-b759-8289b9c546be" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="400" src="https://github.com/user-attachments/assets/1633f34b-1555-403d-b695-d9df34ca3197" alt="MovieHub" />
     </td>
   </tr>
-
-  <!-- Bottom row (2 images, centered again) -->
-  <tr>
-    <td style="width: 100px;"></td>
+    <tr>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/380e51af-ef7e-4842-860e-a39c81a76aca" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/14683de8-bf13-46ae-bc3b-f55038cb8ea9" alt="MovieHub" />
     </td>
     <td>
-      <img height="300" src="https://github.com/user-attachments/assets/fc55430e-c204-48d1-af97-23d334e684f0" alt="MovieHub" />
+      <img height="400" src="https://github.com/user-attachments/assets/268023f5-a462-494d-9d52-43793c98f53e" alt="MovieHub" />
     </td>
-    <td style="width: 100px;"></td>
+    <td>
+      <img height="400" src="https://github.com/user-attachments/assets/5769844a-31f9-469c-b796-1601fe08de1b" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="400" src="https://github.com/user-attachments/assets/3b90794b-5ddf-4243-8b82-7a429b2b0617" alt="MovieHub" />
+    </td>
   </tr>
 </table>
 
