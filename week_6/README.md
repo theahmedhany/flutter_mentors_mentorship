@@ -362,16 +362,20 @@ feature/
 - **flutter_lints** (^5.0.0) - Recommended Flutter linting rules
 - **flutter_test** - Flutter testing framework
 
-<table align="center">
+<table align="center" style="border-collapse: collapse; text-align: center;">
   <tr>
+    <td colspan="3"></td>
     <td>
       <img height="300" src="https://github.com/user-attachments/assets/d32dca3d-205a-4ad3-996a-a43589fb4158" alt="MovieHub" />
     </td>
     <td>
       <img height="300" src="https://github.com/user-attachments/assets/ea272621-4ee7-4c61-a53f-230341bb34cc" alt="MovieHub" />
     </td>
+    <td colspan="3"></td>
   </tr>
+
   <tr>
+    <td colspan="2"></td>
     <td>
       <img height="300" src="https://github.com/user-attachments/assets/6dff2ce5-9a76-4d1b-b759-8289b9c546be" alt="MovieHub" />
     </td>
@@ -381,14 +385,18 @@ feature/
     <td>
       <img height="300" src="https://github.com/user-attachments/assets/14683de8-bf13-46ae-bc3b-f55038cb8ea9" alt="MovieHub" />
     </td>
+    <td colspan="2"></td>
   </tr>
-    <tr>
+
+  <tr>
+    <td colspan="3"></td>
     <td>
       <img height="300" src="https://github.com/user-attachments/assets/380e51af-ef7e-4842-860e-a39c81a76aca" alt="MovieHub" />
     </td>
     <td>
       <img height="300" src="https://github.com/user-attachments/assets/fc55430e-c204-48d1-af97-23d334e684f0" alt="MovieHub" />
     </td>
+    <td colspan="3"></td>
   </tr>
 </table>
 
