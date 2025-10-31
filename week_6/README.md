@@ -170,6 +170,36 @@ flutter build ios --release
 - **Theme Persistence**: Remember user's theme preference
 - **Immersive Mode**: Full-screen experience with transparent status bar
 
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/a1d395d8-a4a0-4686-84b9-0d35a6a8411b" alt="MovieHub" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/82598991-d252-4dee-9f71-e31ef357e344" alt="MovieHub" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/492139bf-eb2d-43e3-83e9-f54589e280ad" alt="MovieHub" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/68ac9496-6b4b-4464-a78f-38a417cb016f" alt="MovieHub" />
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2aa60d10-2e1f-4f88-aa7b-74ae6a531239" alt="MovieHub" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/576bcecc-c9b1-4b5a-b4fa-f1b3264314a9" alt="MovieHub" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/f296a592-e522-46e0-836f-5ff023c62d8a" alt="MovieHub" />
+    </td>
+  </tr>
+</table>
+
 ## 🌐 API Endpoints Used
 
 ### Base URL
