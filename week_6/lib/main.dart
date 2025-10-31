@@ -1,8 +1,10 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:week_6/core/cache/hive_cache_adapters.dart';
 import 'package:week_6/core/di/dependency_injection.dart';
 import 'package:week_6/core/helpers/shared_pref_helper.dart';
@@ -14,14 +16,12 @@ import 'package:week_6/core/theme/theme_manager/theme_cubit.dart';
 import 'package:week_6/features/details/data/cache/movie_details_cache_service.dart';
 import 'package:week_6/features/home/data/cache/movies_cache_service.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
 
   await SharedPrefHelper.init();
-
   await initGetIt();
-
   await HiveCacheAdapters.init();
   await MoviesCacheService.init();
   await MovieDetailsCacheService.init();
@@ -31,14 +31,28 @@ void main() async {
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
 
-  runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (context) {
-        return MyApp(appRouter: AppRouter());
+  if (!kDebugMode) {
+    await SentryFlutter.init(
+      (options) {
+        options.dsn =
+            'https://b70be1b821613139d05c59d78a256f11@o4510283114086400.ingest.us.sentry.io/4510283118673920';
+        options.sendDefaultPii = true;
       },
-    ),
-  );
+      appRunner: () => runApp(
+        DevicePreview(
+          enabled: !kReleaseMode,
+          builder: (context) => MyApp(appRouter: AppRouter()),
+        ),
+      ),
+    );
+  } else {
+    runApp(
+      DevicePreview(
+        enabled: false,
+        builder: (context) => MyApp(appRouter: AppRouter()),
+      ),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
