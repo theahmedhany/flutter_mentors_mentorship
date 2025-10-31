@@ -170,32 +170,32 @@ flutter build ios --release
 - **Theme Persistence**: Remember user's theme preference
 - **Immersive Mode**: Full-screen experience with transparent status bar
 
-<table>
+<table align="center">
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/a1d395d8-a4a0-4686-84b9-0d35a6a8411b" alt="MovieHub" />
+      <img height="300" src="https://github.com/user-attachments/assets/a1d395d8-a4a0-4686-84b9-0d35a6a8411b" alt="MovieHub" />
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/82598991-d252-4dee-9f71-e31ef357e344" alt="MovieHub" />
-    </td>
-    <td>
-      <img src="https://github.com/user-attachments/assets/492139bf-eb2d-43e3-83e9-f54589e280ad" alt="MovieHub" />
+      <img height="300" src="https://github.com/user-attachments/assets/82598991-d252-4dee-9f71-e31ef357e344" alt="MovieHub" />
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/68ac9496-6b4b-4464-a78f-38a417cb016f" alt="MovieHub" />
+      <img height="300" src="https://github.com/user-attachments/assets/492139bf-eb2d-43e3-83e9-f54589e280ad" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/68ac9496-6b4b-4464-a78f-38a417cb016f" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/2aa60d10-2e1f-4f88-aa7b-74ae6a531239" alt="MovieHub" />
     </td>
   </tr>
     <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/2aa60d10-2e1f-4f88-aa7b-74ae6a531239" alt="MovieHub" />
+      <img height="300" src="https://github.com/user-attachments/assets/576bcecc-c9b1-4b5a-b4fa-f1b3264314a9" alt="MovieHub" />
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/576bcecc-c9b1-4b5a-b4fa-f1b3264314a9" alt="MovieHub" />
-    </td>
-    <td>
-      <img src="https://github.com/user-attachments/assets/f296a592-e522-46e0-836f-5ff023c62d8a" alt="MovieHub" />
+      <img height="300" src="https://github.com/user-attachments/assets/f296a592-e522-46e0-836f-5ff023c62d8a" alt="MovieHub" />
     </td>
   </tr>
 </table>
@@ -361,6 +361,36 @@ feature/
 - **build_runner** (^2.4.13) - Code generation runner
 - **flutter_lints** (^5.0.0) - Recommended Flutter linting rules
 - **flutter_test** - Flutter testing framework
+
+<table align="center">
+  <tr>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/d32dca3d-205a-4ad3-996a-a43589fb4158" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/ea272621-4ee7-4c61-a53f-230341bb34cc" alt="MovieHub" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/6dff2ce5-9a76-4d1b-b759-8289b9c546be" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/1633f34b-1555-403d-b695-d9df34ca3197" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/14683de8-bf13-46ae-bc3b-f55038cb8ea9" alt="MovieHub" />
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/380e51af-ef7e-4842-860e-a39c81a76aca" alt="MovieHub" />
+    </td>
+    <td>
+      <img height="300" src="https://github.com/user-attachments/assets/fc55430e-c204-48d1-af97-23d334e684f0" alt="MovieHub" />
+    </td>
+  </tr>
+</table>
 
 ## 🛠️ Development Setup
 
