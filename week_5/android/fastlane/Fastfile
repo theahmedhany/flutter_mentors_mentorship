@@ -1,0 +1,23 @@
+default_platform(:android)
+
+platform :android do
+  desc "Distribute the app to firebase app distribution with Fastlane."
+  lane :distribute do
+    sh "flutter clean"
+    sh "flutter build apk --release"
+    firebase_app_distribution(
+      # Firebase App ID from the project settings in Firebase Console
+      app: "1:677807517470:android:2ea5e9fb07d4bb5b44230f",
+
+      # Path to the Firebase CLI token file
+      firebase_cli_token: "1//03NIe2gX_7keKCgYIARAAGAMSNwF-L9IruKZ6zQLFTZpCBaEUUUgRWT24ubffDRFPZ85Yx286xDW6jU_bIAOl0RrbILlOLlsijHA",
+
+      android_artifact_type: "APK",
+      android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
+
+      # The email address of the testers who will receive the app
+      testers: "tester_1@example.com", "tester_2@example.com",
+      release_notes: "New release with bug fixes and improvements to testing.",
+    )
+  end
+end
